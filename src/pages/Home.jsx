@@ -1,4 +1,5 @@
 import GameCard from "../components/GameCard";
+import { Link } from "react-router-dom";
 function Home() {
   return (
     <main className="home">

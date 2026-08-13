@@ -518,4 +518,194 @@ body {
     margin: 70px 20px 0;
   }
 }
+/* =========================
+   CROSSWORD
+========================= */
+
+.crossword-page {
+  min-height: 100vh;
+  padding: 60px 8%;
+  background: #fff7fb;
+}
+
+.crossword-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.game-label {
+  color: #ff3f8e;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+
+.crossword-header h1 {
+  font-size: 3rem;
+  color: #45233b;
+  margin: 10px 0;
+}
+
+.crossword-header h1 span {
+  color: #ff3f8e;
+}
+
+.crossword-header p {
+  color: #76566a;
+}
+
+/* Category Selection */
+
+.category-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.category-card {
+  border: 3px solid #ffd9e9;
+  background: white;
+  border-radius: 30px;
+  padding: 35px 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-7px);
+}
+
+.category-icon {
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+.category-card h2 {
+  color: #45233b;
+  margin-bottom: 10px;
+}
+
+.category-card p {
+  color: #76566a;
+  line-height: 1.5;
+  min-height: 70px;
+}
+
+.category-play {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #ff3f8e;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+/* Puzzle */
+
+.back-button {
+  border: none;
+  background: transparent;
+  color: #ff3f8e;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.clue-list {
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.clue-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  border: 3px solid #ffd9e9;
+  border-radius: 20px;
+  padding: 18px;
+}
+
+.clue-number {
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff6fae;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.clue-content {
+  flex: 1;
+}
+
+.clue-content p {
+  margin-top: 0;
+  color: #45233b;
+  font-weight: 500;
+}
+
+.clue-content input {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  border: 2px solid #ffd9e9;
+  border-radius: 12px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+
+.clue-content input:focus {
+  outline: none;
+  border-color: #ff3f8e;
+}
+
+.crossword-actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.crossword-page .check-button {
+  border: none;
+  background: #ff3f8e;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.crossword-message {
+  color: #ff3f8e;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .crossword-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .clue-card {
+    align-items: flex-start;
+  }
+}
 
