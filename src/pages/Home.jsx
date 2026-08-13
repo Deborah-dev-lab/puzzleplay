@@ -1,5 +1,3 @@
-import GameCard from "../components/GameCard";
-
 function Home() {
   return (
     <main className="home">
@@ -36,26 +34,32 @@ function Home() {
 
         <div className="games">
 
-          <GameCard
-            title="Crossword"
-            description="Grab your pencil and solve those clues!"
-            icon="📝"
-            link="/crossword"
-          />
+          <div className="game-card">
+            <div className="card-sticker">📝</div>
+            <h2>Crossword</h2>
+            <p>Solve the clues and show off your brain!</p>
+            <a href="/crossword" className="play-button">
+              Play Now ✦
+            </a>
+          </div>
 
-          <GameCard
-            title="Sudoku"
-            description="Put your thinking cap on and slay the numbers!"
-            icon="🔢"
-            link="/sudoku"
-          />
+          <div className="game-card">
+            <div className="card-sticker">🔢</div>
+            <h2>Sudoku</h2>
+            <p>Put your thinking cap on and slay the numbers!</p>
+            <a href="/sudoku" className="play-button">
+              Play Now ✦
+            </a>
+          </div>
 
-          <GameCard
-            title="Word Search"
-            description="Find the hidden words before they disappear!"
-            icon="🔎"
-            link="/wordsearch"
-          />
+          <div className="game-card">
+            <div className="card-sticker">🔎</div>
+            <h2>Word Search</h2>
+            <p>Find the hidden words before they disappear!</p>
+            <a href="/wordsearch" className="play-button">
+              Play Now ✦
+            </a>
+          </div>
 
         </div>
 
