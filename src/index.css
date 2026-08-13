@@ -708,4 +708,159 @@ body {
     align-items: flex-start;
   }
 }
+/* =========================
+   SUDOKU
+========================= */
+
+.sudoku-page {
+  min-height: 100vh;
+  padding: 60px 8%;
+  background: #fff7fb;
+}
+
+.sudoku-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.sudoku-header h1 {
+  font-size: 3rem;
+  color: #45233b;
+  margin: 10px 0;
+}
+
+.sudoku-header h1 span {
+  color: #ff3f8e;
+}
+
+.sudoku-header p {
+  color: #76566a;
+}
+
+.sudoku-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  width: min(90vw, 540px);
+  aspect-ratio: 1;
+  border: 4px solid #d92f58;
+  background: #d92f58;
+}
+
+.sudoku-cell {
+  border: 1px solid #ffd9e9;
+  background: white;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: bold;
+  color: #45233b;
+  cursor: pointer;
+}
+
+.sudoku-cell.given {
+  background: #ffe4ef;
+  color: #45233b;
+}
+
+.sudoku-cell.editable {
+  color: #ff3f8e;
+}
+
+.sudoku-cell.selected {
+  background: #ffd0e3;
+}
+
+.sudoku-cell:nth-child(3n) {
+  border-right: 3px solid #d92f58;
+}
+
+.sudoku-cell:nth-child(n+19):nth-child(-n+27),
+.sudoku-cell:nth-child(n+46):nth-child(-n+54) {
+  border-bottom: 3px solid #d92f58;
+}
+
+.number-pad {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 25px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.number-pad button {
+  border: none;
+  background: #ff6fae;
+  color: white;
+  padding: 12px;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.number-pad button:hover {
+  background: #ff3f8e;
+}
+
+.number-pad .clear-number {
+  background: #ffd9e9;
+  color: #45233b;
+}
+
+.sudoku-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sudoku-page .check-button,
+.new-puzzle-button {
+  border: none;
+  padding: 14px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sudoku-page .check-button {
+  background: #ff3f8e;
+  color: white;
+}
+
+.new-puzzle-button {
+  background: #ffd9e9;
+  color: #45233b;
+}
+
+.sudoku-message {
+  margin-top: 20px;
+  color: #ff3f8e;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .sudoku-page {
+    padding: 40px 5%;
+  }
+
+  .sudoku-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .sudoku-board {
+    width: 95vw;
+  }
+
+  .number-pad {
+    max-width: 95vw;
+  }
+}
 

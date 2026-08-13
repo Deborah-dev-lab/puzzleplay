@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Crossword from "./games/crossword/Crossword";
+import Sudoku from "./games/sudoku/Sudoku";
 
 function App() {
   return (
@@ -15,9 +16,15 @@ function App() {
           path="/crossword"
           element={<Crossword />}
         />
+
+        <Route
+          path="/sudoku"
+          element={<Sudoku />}
+        />
       </Routes>
     </BrowserRouter>
   );
 }
+
 
 export default App;
