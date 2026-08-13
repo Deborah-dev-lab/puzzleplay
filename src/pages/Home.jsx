@@ -1,3 +1,4 @@
+import GameCard from "../components/GameCard";
 function Home() {
   return (
     <main className="home">

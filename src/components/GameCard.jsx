@@ -9,7 +9,7 @@ function GameCard({ title, description, icon, link }) {
       <div className="card-content">
 
         <p className="card-label">
-          ♡ PUZZLE TIME ♡
+          ♡ PLAY NOW ♡
         </p>
 
         <h2>{title}</h2>
