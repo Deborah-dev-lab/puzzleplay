@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Crossword from "./games/crossword/Crossword";
@@ -8,7 +8,7 @@ import Scores from "./pages/Scores";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
 
       <Routes>
@@ -18,7 +18,7 @@ function App() {
         <Route path="/wordsearch" element={<WordSearch />} />
         <Route path="/scores" element={<Scores />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
